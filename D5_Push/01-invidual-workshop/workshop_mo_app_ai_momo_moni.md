@@ -1,9 +1,4 @@
-### 9. Reflection (Cá nhân)
 
-- **Tóm tắt trải nghiệm:** Trong quá trình thử nghiệm Moni, tôi thấy sản phẩm có mặt mạnh khi xử lý các tác vụ tài chính thuần túy (phân tích chi tiêu, hiển thị biểu đồ), nhưng dễ bị lệch khi gặp yêu cầu ngoài phạm vi vì thiếu lớp kiểm soát intent và fallback phù hợp.
-- **Điểm học được:** Guardrails và UX Recovery (ví dụ: clarification, undo, handoff) quan trọng không kém mô hình ngôn ngữ — chúng bảo vệ chi phí vận hành và tính nhất quán thương hiệu.
-- **Vấn đề cần ưu tiên:** Thêm `Intent Classifier`, build fallback UI có quick actions, và logging feedback để thu thập dữ liệu sửa lỗi (correction log).
-- **Hành động cá nhân:** Tôi sẽ nộp phần này kèm 1 đoạn reflection ngắn (200–300 chữ) nếu cần cho bài cá nhân, hoặc rút gọn thành 3 đoạn nếu thầy/cô yêu cầu bản ngắn hơn.
 # BÁO CÁO WORKSHOP: MỔ APP AI THẬT
 ## CASE STUDY: MOMO — MONI (TRỢ THỦ TÀI CHÍNH)
 
@@ -39,26 +34,6 @@
 * **Nên sửa bằng:** [Product Decision / Requirement] 
     * Bổ sung một layer **Intent Classifier** (bộ phân loại ý định) trước khi đẩy prompt vào LLM chính.
     * Nếu nhận diện `Intent = Out-of-Domain (OOD)`, kích hoạt kịch bản **Graceful Fallback** (từ chối khéo léo) kết hợp UI Component (Quick Reply Buttons) để kéo user quay lại Happy Path tài chính.
-
-### 8. Hướng dẫn: Thêm ảnh vào file này
-
-- **Đặt file ảnh:** Put (upload) file ảnh vào thư mục `images/` trong cùng folder với file markdown. Ví dụ: `images/moni-screenshot.png`.
-- **Chèn ảnh (Markdown):**
-
-```
-![Chụp màn hình Moni](images/moni-screenshot.png)
-```
-
-- **Chèn ảnh với điều chỉnh kích thước / căn giữa (HTML trong Markdown):**
-
-```
-<p align="center">
-  <img src="images/moni-screenshot.png" alt="Moni screenshot" width="360" />
-</p>
-```
-
-- **Xem trước:** Mở file markdown trong VS Code và nhấn `Ctrl+Shift+V` (Preview) hoặc nút Preview để kiểm tra ảnh hiển thị. Trên GitHub/Remote, push cả file markdown và file ảnh vào repository.
-- **Lưu ý đường dẫn:** Đường dẫn `images/moni-screenshot.png` là tương đối so với vị trí của `workshop_mo_app_ai_momo_moni.md`.
 
 
 
@@ -131,3 +106,13 @@ Nhưng chuyện ví tiền thì Moni rành lắm. Bạn cần giúp gì nào?"
   * *Ví dụ:* *"Giao dịch này cần kiểm tra kỹ hơn. Moni xin phép kết nối bạn với chuyên viên CSKH nhé"* kèm nút `[Chat với CSKH]`.
 * **Correction Log (Lưu vết / Feedback Loop):** Chạy ngầm phía backend để thu thập dữ liệu fine-tune. 
   * *Ví dụ:* Khi bot phân loại sai một giao dịch (từ "Hóa đơn" sang "Giải trí") và user sửa lại, hệ thống cần tự động ghi log `{"user_query", "ai_predicted", "user_corrected"}` để đánh giá và cập nhật trọng số cho mô hình phân loại.
+
+
+
+
+### 8. Reflection (Cá nhân)
+
+- **Tóm tắt trải nghiệm:** Trong quá trình thử nghiệm Moni, tôi thấy sản phẩm có mặt mạnh khi xử lý các tác vụ tài chính thuần túy (phân tích chi tiêu, hiển thị biểu đồ), nhưng dễ bị lệch khi gặp yêu cầu ngoài phạm vi vì thiếu lớp kiểm soát intent và fallback phù hợp.
+- **Điểm học được:** Guardrails và UX Recovery (ví dụ: clarification, undo, handoff) quan trọng không kém mô hình ngôn ngữ — chúng bảo vệ chi phí vận hành và tính nhất quán thương hiệu.
+- **Vấn đề cần ưu tiên:** Thêm `Intent Classifier`, build fallback UI có quick actions, và logging feedback để thu thập dữ liệu sửa lỗi (correction log).
+- **Hành động cá nhân:** Tôi sẽ nộp phần này kèm 1 đoạn reflection ngắn (200–300 chữ) nếu cần cho bài cá nhân, hoặc rút gọn thành 3 đoạn nếu thầy/cô yêu cầu bản ngắn hơn.
