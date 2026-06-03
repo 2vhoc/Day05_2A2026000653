@@ -1,3 +1,9 @@
+### 9. Reflection (Cá nhân)
+
+- **Tóm tắt trải nghiệm:** Trong quá trình thử nghiệm Moni, tôi thấy sản phẩm có mặt mạnh khi xử lý các tác vụ tài chính thuần túy (phân tích chi tiêu, hiển thị biểu đồ), nhưng dễ bị lệch khi gặp yêu cầu ngoài phạm vi vì thiếu lớp kiểm soát intent và fallback phù hợp.
+- **Điểm học được:** Guardrails và UX Recovery (ví dụ: clarification, undo, handoff) quan trọng không kém mô hình ngôn ngữ — chúng bảo vệ chi phí vận hành và tính nhất quán thương hiệu.
+- **Vấn đề cần ưu tiên:** Thêm `Intent Classifier`, build fallback UI có quick actions, và logging feedback để thu thập dữ liệu sửa lỗi (correction log).
+- **Hành động cá nhân:** Tôi sẽ nộp phần này kèm 1 đoạn reflection ngắn (200–300 chữ) nếu cần cho bài cá nhân, hoặc rút gọn thành 3 đoạn nếu thầy/cô yêu cầu bản ngắn hơn.
 # BÁO CÁO WORKSHOP: MỔ APP AI THẬT
 ## CASE STUDY: MOMO — MONI (TRỢ THỦ TÀI CHÍNH)
 
